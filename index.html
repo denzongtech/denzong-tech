@@ -1,0 +1,1521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Denzong Tech | AI-Powered Growth for Sikkim Businesses</title>
+
+<meta name="description"
+content="Denzong Tech helps Sikkim hotels, homestays, cafes, restaurants, shops and startups grow online with AI-powered marketing.">
+
+<style>
+
+/* =========================
+   GLOBAL
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    color:#172033;
+    line-height:1.6;
+    background:#ffffff;
+}
+
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:auto;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+    cursor:pointer;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(255,255,255,.95);
+    border-bottom:1px solid #e8edf3;
+    backdrop-filter:blur(10px);
+}
+
+.navbar{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    font-size:23px;
+    font-weight:900;
+    letter-spacing:2px;
+    color:#071a35;
+}
+
+.logo span{
+    display:block;
+    font-size:9px;
+    letter-spacing:5px;
+    color:#14845b;
+    margin-top:-5px;
+}
+
+.nav-links{
+    display:flex;
+    gap:28px;
+    align-items:center;
+}
+
+.nav-links a{
+    font-size:14px;
+    color:#4e5a6c;
+}
+
+.nav-links a:hover{
+    color:#1264d8;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 21px;
+    border-radius:10px;
+    font-weight:700;
+    border:none;
+}
+
+.btn-primary{
+    background:#1264d8;
+    color:white;
+    box-shadow:0 8px 20px rgba(18,100,216,.2);
+}
+
+.btn-primary:hover{
+    background:#0d51b1;
+}
+
+.btn-light{
+    background:white;
+    color:#081a33;
+    border:1px solid #dbe2eb;
+}
+
+.mobile-menu{
+    display:none;
+    font-size:25px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    padding:95px 0 85px;
+    background:
+        radial-gradient(circle at 90% 20%,#dff4ea 0,transparent 30%),
+        linear-gradient(135deg,#f7fbff,#edf6ff 60%,#f5fbf7);
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:55px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:7px 14px;
+    background:#e4f4ed;
+    color:#087149;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:clamp(42px,6vw,75px);
+    line-height:1.02;
+    letter-spacing:-3px;
+    color:#071a35;
+    margin-bottom:22px;
+}
+
+h1 span{
+    color:#1264d8;
+}
+
+.hero-text{
+    font-size:18px;
+    color:#657184;
+    max-width:650px;
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+/* =========================
+   AI PREVIEW CARD
+========================= */
+
+.ai-preview{
+    background:white;
+    border-radius:25px;
+    padding:25px;
+    box-shadow:0 25px 70px rgba(25,52,90,.15);
+    border:1px solid #edf1f5;
+}
+
+.ai-header{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:18px;
+    font-weight:800;
+}
+
+.online{
+    color:#16845b;
+    font-size:13px;
+}
+
+.ai-request{
+    background:#071a35;
+    color:white;
+    border-radius:18px;
+    padding:22px;
+    margin-bottom:15px;
+}
+
+.ai-request small{
+    color:#aebbd0;
+}
+
+.ai-request strong{
+    display:block;
+    font-size:17px;
+    margin:6px 0;
+}
+
+.ai-output{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.ai-output div{
+    background:#f4f7fb;
+    border:1px solid #e4e9f0;
+    border-radius:12px;
+    padding:13px;
+    font-weight:700;
+    font-size:14px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    padding:85px 0;
+}
+
+.section-light{
+    background:#f6f9fc;
+}
+
+.center{
+    text-align:center;
+}
+
+.eyebrow{
+    color:#16845b;
+    text-transform:uppercase;
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:2px;
+    margin-bottom:8px;
+}
+
+h2{
+    font-size:clamp(30px,4vw,48px);
+    line-height:1.12;
+    color:#071a35;
+    margin-bottom:15px;
+}
+
+.section-intro{
+    max-width:720px;
+    margin:0 auto 45px;
+    color:#687486;
+}
+
+/* =========================
+   SERVICE CARDS
+========================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:27px;
+    border-radius:18px;
+    border:1px solid #e5eaf0;
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(20,40,70,.09);
+}
+
+.icon{
+    font-size:31px;
+    margin-bottom:12px;
+}
+
+.card h3{
+    color:#071a35;
+    margin-bottom:8px;
+}
+
+.card p{
+    color:#687486;
+    font-size:14px;
+}
+
+/* =========================
+   AI GENERATOR
+========================= */
+
+.ai-section{
+    background:#071a35;
+    color:white;
+}
+
+.ai-section h2{
+    color:white;
+}
+
+.ai-section .section-intro{
+    color:#b9c5d6;
+}
+
+.generator{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.generator-box{
+    background:white;
+    color:#172033;
+    padding:25px;
+    border-radius:20px;
+}
+
+.generator-box h3{
+    margin-bottom:15px;
+}
+
+textarea{
+    width:100%;
+    min-height:170px;
+    resize:vertical;
+    border:1px solid #dce3ec;
+    border-radius:12px;
+    padding:15px;
+    font-family:inherit;
+    font-size:15px;
+    outline:none;
+}
+
+textarea:focus{
+    border-color:#1264d8;
+}
+
+.generate-btn{
+    width:100%;
+    margin-top:12px;
+    background:#1264d8;
+    color:white;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    font-weight:800;
+}
+
+.result{
+    background:#102d53;
+    border:1px solid #27486f;
+    padding:25px;
+    border-radius:20px;
+    min-height:280px;
+}
+
+.result h3{
+    margin-bottom:15px;
+}
+
+.result p{
+    color:#d2dceb;
+    margin-bottom:12px;
+    font-size:14px;
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.step{
+    padding:25px;
+    border-top:4px solid #1264d8;
+    background:white;
+    border-radius:0 0 15px 15px;
+    box-shadow:0 7px 25px rgba(20,40,70,.05);
+}
+
+.number{
+    color:#c9daf2;
+    font-size:40px;
+    font-weight:900;
+}
+
+.step h3{
+    margin-bottom:7px;
+}
+
+.step p{
+    color:#687486;
+    font-size:14px;
+}
+
+/* =========================
+   AUDIENCE
+========================= */
+
+.audience{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:13px;
+}
+
+.audience-card{
+    padding:22px 10px;
+    text-align:center;
+    border:1px solid #e1e7ee;
+    border-radius:15px;
+    background:white;
+    font-weight:800;
+}
+
+.audience-card div{
+    font-size:28px;
+    margin-bottom:6px;
+}
+
+/* =========================
+   PRICING
+========================= */
+
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.price-card{
+    background:white;
+    border:1px solid #e0e6ed;
+    border-radius:20px;
+    padding:30px;
+}
+
+.price-card.featured{
+    border:2px solid #1264d8;
+    box-shadow:0 15px 45px rgba(18,100,216,.13);
+}
+
+.price{
+    font-size:38px;
+    font-weight:900;
+    color:#071a35;
+    margin:10px 0 20px;
+}
+
+.price span{
+    font-size:14px;
+    font-weight:500;
+    color:#687486;
+}
+
+.price-card ul{
+    list-style:none;
+    margin-bottom:25px;
+}
+
+.price-card li{
+    margin:9px 0;
+    color:#5f6b7c;
+}
+
+.price-card li::before{
+    content:"✓ ";
+    color:#16845b;
+    font-weight:900;
+}
+
+/* =========================
+   SIKKIM SECTION
+========================= */
+
+.sikkim{
+    background:
+        linear-gradient(rgba(7,26,53,.9),rgba(7,26,53,.9)),
+        linear-gradient(135deg,#16845b,#1264d8);
+    color:white;
+    text-align:center;
+}
+
+.sikkim h2{
+    color:white;
+}
+
+.sikkim p{
+    max-width:720px;
+    margin:0 auto 25px;
+    color:#d1dbea;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    text-align:center;
+    padding:60px 20px;
+    background:#f2f7ff;
+    border-radius:25px;
+}
+
+.cta p{
+    color:#687486;
+    margin:0 auto 25px;
+    max-width:650px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#061326;
+    color:#c6d1e1;
+    padding:45px 0;
+}
+
+.footer{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.footer .logo{
+    color:white;
+}
+
+.footer-links{
+    display:flex;
+    gap:20px;
+}
+
+.footer-links a{
+    font-size:13px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:850px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .mobile-menu{
+        display:block;
+    }
+
+    .hero-grid,
+    .generator{
+        grid-template-columns:1fr;
+    }
+
+    .cards,
+    .pricing{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .steps{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .audience{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:560px){
+
+    section{
+        padding:60px 0;
+    }
+
+    .hero{
+        padding:65px 0;
+    }
+
+    h1{
+        letter-spacing:-2px;
+    }
+
+    .cards,
+    .pricing,
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    .audience{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-buttons .btn{
+        text-align:center;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+<div class="container navbar">
+
+<a href="#" class="logo">
+DENZONG
+<span>TECH</span>
+</a>
+
+<div class="nav-links">
+
+<a href="#solutions">Solutions</a>
+<a href="#ai">Denzong AI</a>
+<a href="#how">How It Works</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+<a href="#contact" class="btn btn-primary">
+Get Started
+</a>
+
+<div class="mobile-menu">
+☰
+</div>
+
+</div>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+<div class="container hero-grid">
+
+<div>
+
+<div class="badge">
+🏔️ BUILT FOR SIKKIM • POWERED BY AI
+</div>
+
+<h1>
+Grow Your Business
+<span>With AI.</span>
+</h1>
+
+<p class="hero-text">
+
+Denzong Tech helps Sikkim's hotels, homestays,
+cafés, restaurants, shops and startups create better
+marketing, reach more customers and grow online.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#contact" class="btn btn-primary">
+🚀 Start Growing
+</a>
+
+<a href="#ai" class="btn btn-light">
+See How It Works
+</a>
+
+</div>
+
+</div>
+
+
+<!-- AI PREVIEW -->
+
+<div class="ai-preview">
+
+<div class="ai-header">
+
+<span>🤖 Denzong AI</span>
+
+<span class="online">
+● Ready
+</span>
+
+</div>
+
+
+<div class="ai-request">
+
+<small>YOUR REQUEST</small>
+
+<strong>
+Create a campaign for my Ravangla homestay
+</strong>
+
+<small>
+5 rooms • Himalayan views • ₹2,500/night
+</small>
+
+</div>
+
+
+<div class="ai-output">
+
+<div>📱 Instagram Post</div>
+
+<div>📢 Advertisement</div>
+
+<div>💬 WhatsApp</div>
+
+<div>🎥 Reel Script</div>
+
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section>
+
+<div class="container center">
+
+<div class="eyebrow">
+THE PROBLEM WE SOLVE
+</div>
+
+<h2>
+Your Business Deserves to Be Seen.
+</h2>
+
+<p class="section-intro">
+
+Great local businesses often don't have the time,
+skills or resources to manage digital marketing.
+
+Denzong Tech makes it simple—from your first post
+to your next customer.
+
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SOLUTIONS
+========================= -->
+
+<section class="section-light" id="solutions">
+
+<div class="container">
+
+<div class="center">
+
+<div class="eyebrow">
+SOLUTIONS
+</div>
+
+<h2>
+Everything You Need to Grow Online
+</h2>
+
+<p class="section-intro">
+
+One simple platform for your everyday digital marketing.
+
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="icon">🌐</div>
+
+<h3>
+AI Website
+</h3>
+
+<p>
+Create a professional online presence with your
+business information, photos, services, offers and contacts.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📱</div>
+
+<h3>
+Social Media
+</h3>
+
+<p>
+Create Facebook and Instagram posts, captions,
+reels ideas and marketing campaigns in minutes.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📢</div>
+
+<h3>
+AI Advertising
+</h3>
+
+<p>
+Generate promotional advertisements designed
+around your business and target customers.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">💬</div>
+
+<h3>
+WhatsApp Marketing
+</h3>
+
+<p>
+Turn website visitors and enquiries into
+conversations with ready-to-send messages.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">⭐</div>
+
+<h3>
+Reviews
+</h3>
+
+<p>
+Respond professionally to customer reviews
+and strengthen your online reputation.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📊</div>
+
+<h3>
+Analytics
+</h3>
+
+<p>
+Understand your reach, enquiries and
+marketing performance.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     AI GENERATOR
+========================= -->
+
+<section class="ai-section" id="ai">
+
+<div class="container">
+
+<div class="center">
+
+<div class="eyebrow">
+DENZONG AI
+</div>
+
+<h2>
+Your AI Marketing Assistant
+</h2>
+
+<p class="section-intro">
+
+Describe your business and turn one idea
+into a complete marketing campaign.
+
+</p>
+
+</div>
+
+
+<div class="generator">
+
+
+<div class="generator-box">
+
+<h3>
+Tell Denzong AI About Your Business
+</h3>
+
+<textarea
+id="businessInput"
+placeholder="Example:
+
+I run a homestay in Ravangla with 5 rooms,
+Himalayan views and homemade Sikkimese food.
+
+Create a campaign for October."
+></textarea>
+
+
+<button
+class="generate-btn"
+onclick="generateCampaign()">
+
+✨ Generate Campaign
+
+</button>
+
+</div>
+
+
+
+<div class="result" id="result">
+
+<h3>
+AI Campaign Preview
+</h3>
+
+<p>
+
+Enter your business information and click
+"Generate Campaign".
+
+</p>
+
+<p>
+
+The current version is a front-end demonstration.
+The production version can connect to an AI API.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     HOW IT WORKS
+========================= -->
+
+<section id="how">
+
+<div class="container">
+
+<div class="center">
+
+<div class="eyebrow">
+SIMPLE PROCESS
+</div>
+
+<h2>
+From Business Idea to Digital Growth
+</h2>
+
+</div>
+
+
+<div class="steps">
+
+
+<div class="step">
+
+<div class="number">
+01
+</div>
+
+<h3>
+Tell Us
+</h3>
+
+<p>
+Add your business name, location,
+services, photos and contact details.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">
+02
+</div>
+
+<h3>
+Let AI Work
+</h3>
+
+<p>
+Denzong AI creates marketing
+content and campaign ideas.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">
+03
+</div>
+
+<h3>
+Publish
+</h3>
+
+<p>
+Share your content across your
+digital channels and WhatsApp.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="number">
+04
+</div>
+
+<h3>
+Grow
+</h3>
+
+<p>
+Track enquiries and improve
+your digital presence.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     BUSINESSES
+========================= -->
+
+<section class="section-light">
+
+<div class="container">
+
+<div class="center">
+
+<div class="eyebrow">
+WHO WE HELP
+</div>
+
+<h2>
+Built for Local Businesses
+</h2>
+
+</div>
+
+
+<div class="audience">
+
+
+<div class="audience-card">
+<div>🏨</div>
+Hotels
+</div>
+
+
+<div class="audience-card">
+<div>🏡</div>
+Homestays
+</div>
+
+
+<div class="audience-card">
+<div>☕</div>
+Cafés
+</div>
+
+
+<div class="audience-card">
+<div>🍴</div>
+Restaurants
+</div>
+
+
+<div class="audience-card">
+<div>🛍️</div>
+Shops
+</div>
+
+
+<div class="audience-card">
+<div>🚀</div>
+Startups
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     PRICING
+========================= -->
+
+<section id="pricing">
+
+<div class="container">
+
+<div class="center">
+
+<div class="eyebrow">
+PRICING
+</div>
+
+<h2>
+Start Small. Grow Bigger.
+</h2>
+
+<p class="section-intro">
+
+Simple plans designed for local businesses.
+
+</p>
+
+</div>
+
+
+<div class="pricing">
+
+
+<div class="price-card">
+
+<h3>
+Starter
+</h3>
+
+<div class="price">
+₹299
+<span>/month</span>
+</div>
+
+<ul>
+
+<li>AI marketing</li>
+<li>Social media posts</li>
+<li>Captions</li>
+<li>WhatsApp content</li>
+<li>Basic analytics</li>
+
+</ul>
+
+<a href="#contact" class="btn btn-light">
+Choose Starter
+</a>
+
+</div>
+
+
+
+<div class="price-card featured">
+
+<h3>
+Growth ⭐
+</h3>
+
+<div class="price">
+₹699
+<span>/month</span>
+</div>
+
+<ul>
+
+<li>Everything in Starter</li>
+<li>Mini website</li>
+<li>Reel ideas</li>
+<li>Marketing campaigns</li>
+<li>Review assistant</li>
+
+</ul>
+
+<a href="#contact" class="btn btn-primary">
+Start Growing
+</a>
+
+</div>
+
+
+
+<div class="price-card">
+
+<h3>
+Pro
+</h3>
+
+<div class="price">
+₹1,499
+<span>/month</span>
+</div>
+
+<ul>
+
+<li>Everything in Growth</li>
+<li>AI advertising</li>
+<li>Lead management</li>
+<li>Advanced analytics</li>
+<li>Campaign support</li>
+
+</ul>
+
+<a href="#contact" class="btn btn-light">
+Go Pro
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     SIKKIM
+========================= -->
+
+<section class="sikkim">
+
+<div class="container">
+
+<div class="eyebrow">
+OUR VISION
+</div>
+
+<h2>
+Local Businesses.
+<br>
+Local Stories.
+<br>
+Global Possibilities.
+</h2>
+
+<p>
+
+From Ravangla to Gangtok and Namchi to Pelling,
+Denzong Tech aims to help Sikkim's entrepreneurs
+take their businesses into the digital economy.
+
+</p>
+
+<a href="#contact" class="btn btn-primary">
+Join the Denzong Business Network
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT CTA
+========================= -->
+
+<section id="contact">
+
+<div class="container">
+
+<div class="cta">
+
+<div class="eyebrow">
+GET STARTED
+</div>
+
+<h2>
+Ready to Grow Your Business?
+</h2>
+
+<p>
+
+Tell us about your business and we'll help
+you choose the right starting point.
+
+</p>
+
+<a
+href="mailto:hello@denzongtech.com"
+class="btn btn-primary">
+
+✉️ Contact Denzong Tech
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div class="container footer">
+
+<div>
+
+<div class="logo">
+DENZONG
+<span>TECH</span>
+</div>
+
+<p>
+AI-Powered Growth for Sikkim Businesses.
+</p>
+
+</div>
+
+
+<div class="footer-links">
+
+<a href="#solutions">Solutions</a>
+
+<a href="#ai">Denzong AI</a>
+
+<a href="#pricing">Pricing</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+</div>
+
+</footer>
+
+
+
+<!-- =========================
+     DEMO AI JAVASCRIPT
+========================= -->
+
+<script>
+
+function generateCampaign(){
+
+    const input =
+    document.getElementById("businessInput").value.trim();
+
+    const result =
+    document.getElementById("result");
+
+    if(!input){
+
+        result.innerHTML = `
+        <h3>⚠️ Tell us about your business</h3>
+
+        <p>
+        Enter your business name, location,
+        products/services and offer.
+        </p>
+        `;
+
+        return;
+    }
+
+
+    result.innerHTML = `
+
+    <h3>✨ Campaign Generated</h3>
+
+    <p>
+    <strong>📢 Headline:</strong>
+    Discover something special in Sikkim.
+    </p>
+
+    <p>
+    <strong>📱 Social Post:</strong>
+    Turn your business story and local
+    experience into a post that attracts
+    your ideal customers.
+    </p>
+
+    <p>
+    <strong>💬 WhatsApp:</strong>
+    Hello! Thank you for your interest.
+    We'd be happy to share our latest
+    offers and details with you.
+    </p>
+
+    <p>
+    <strong>🎥 Reel:</strong>
+    Show your location → product/service →
+    customer experience → offer →
+    WhatsApp call-to-action.
+    </p>
+
+    <p>
+    <strong>🚀 Next:</strong>
+    The production version will connect
+    this generator to a real AI API.
+    </p>
+
+    `;
+
+}
+
+</script>
+
+
+</body>
+</html>
